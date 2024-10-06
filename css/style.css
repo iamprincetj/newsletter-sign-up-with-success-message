@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Roboto-Reg";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+:root {
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Tomato: hsl(4, 100%, 67%);
+}
+
+body {
+  font-family: "Roboto-Reg";
+  font-size: 16px;
+}
+
+p,li {
+  color: var(--Grey);
+}
+
+/* MAIN CONTAINER */
+
+.container .main-container {
+  background-color: var(--White);
+}
+
+/* FORM CONTAINER */
+
+.main-container .form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .content-text {
+  margin: 1.5em auto;
+  width: 90%;
+  order: 1;
+}
+
+.content-text h1 {
+  font-family: "Roboto-Bold";
+  font-size: 2.8rem;
+  margin: 0.5em 0;
+}
+
+.content-text p {
+  font-size: 1.1rem;
+}
+
+.content-text ul {
+  margin: 1.5em 0;
+}
+
+.content-text ul li {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  margin: 1em 0;
+}
+
+.content-text ul span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.content-text form {
+  margin-top: 3em;
+}
+
+form .top-input {
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+
+form input {
+  border: 1px solid var(--Grey);
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 1.5em 2em;
+  width: 100%;
+}
+
+button {
+  background-color: var(--DarkSlateGrey);
+  border: none;
+  border-radius: 0.5em;
+  color: var(--White);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5em 0;
+  padding: 1.5em;
+  width: 100%;
+}
+
+button:focus,
+button:hover {
+  background-color: var(--Tomato);
+}
+
+.error {
+  color: var(--Tomato);
+}
+
+/* IMAGES */
+
+.content-text ul img {
+  margin-right: 1.2em;
+}
+
+.form-container .mobile-img {
+  width: 100%;
+}
+
+.form-container .desktop-img {
+  display: none;
+}
+
+
+
+/* THANKS CONTAINER */
+
+
+.container .secondary-main-container {
+  background-color: var(--White);
+  border-radius: 2em;
+  margin: 0 auto;
+  max-width: 40em;
+  width: 100%;
+}
+
+.secondary-main-container .thanks-container {
+  display: none;
+  margin: 5em auto;
+  width: 90%;
+}
+
+.thanks-container img {
+  width: 5rem;
+  margin: 1em 0;
+}
+
+.thanks-container h2 {
+  font-family: "Roboto-Bold";
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0.5em 0;
+}
+
+.thanks-container p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 15em;
+}
+
+.thanks-container span {
+  color: var(--DarkSlateGrey);
+  font-weight: 600;
+}
+
+
+/* FOOTER */
+
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--Tomato);
+  text-decoration: none;
+}
+
+
+@media (min-width: 55em) {
+  .container {
+    background-color: var(--DarkSlateGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .container .main-container {
+    border-radius: 1em;
+    margin: 0 auto;
+    min-width: 53em;
+    width: 70%;
+  }
+
+  /* FORM CONTAINER */
+
+  .main-container .form-container {
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em auto;
+    width: 95%;
+  }
+
+  .form-container .content-text {
+    width: 41%;
+  }
+
+  .content-text h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    margin-bottom: 0.3em;
+  }
+
+  .content-text ul li {
+    margin: 0.5em 0;
+  }
+
+  .form-container .mobile-img {
+    display: none;
+  }
+
+  .form-container .desktop-img {
+    display: block;
+    max-width: 50%;
+    order: 1;
+  }
+
+  /* THANKS CONTAINER */
+  .secondary-main-container .thanks-container {
+    margin: 2em auto;
+    width: 80%;
+  }
+
+  .thanks-container h2 {
+    font-size: 4.5rem;
+  }
+  .thanks-container p {
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+  }
+
+  .attribution {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
